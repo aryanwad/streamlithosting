@@ -505,7 +505,7 @@ def reddit_twitter_webscraping_sentiment(twitter_num_of_tweets = tweet_num,reddi
       main()
 
 def main2():
-  if lstm_model_checkbox or arima_model_checkbox:
+  if lstm_model_checkbox:
     tickers = stock_search.replace(","," ")
     if len(tickers) > 0:
       download_data(tickers)
