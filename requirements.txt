@@ -11,3 +11,4 @@ langdetect==1.0.9
 emoji==1.6.3
 statistics==1.0.3.5
 bs4==0.0.1
+tensorflow==2.7.0
