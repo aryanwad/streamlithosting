@@ -146,7 +146,7 @@ if nlp_model_checkbox:
   
   st.write("Extended sidebar, please scroll down")
 
-if lstm_model_checkbox or arima_model_checkbox:
+if lstm_model_checkbox:
   display_cols = st.sidebar.multiselect('Display Data', ["Close","Low","Open","High",],default = "High")
 
 # Download data from yahoo finance
