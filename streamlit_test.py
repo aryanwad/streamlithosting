@@ -270,7 +270,7 @@ def download_data(ticker = tickers):
 
       value_data=scaler.transform(value_data)
       pr = lstm_model.predict(value_data)
-      st.write(pr)
+      st.write("Predicted price: " + pr)
 
     lstm_prediction()
   
