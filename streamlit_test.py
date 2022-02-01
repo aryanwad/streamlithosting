@@ -36,9 +36,8 @@ st.sidebar.image("AWlogo2.png")
 st.title("Stock Market Analysis")
 
 # Streamlit Sidebar
-st.sidebar.title("Stocks")
 
-stock_search = st.sidebar.text_input('Stock Search')
+stock_search = st.sidebar.text_input('Stock Search',placeholder = "input stock ticker here")
 
 keywords_input = st.sidebar.text_input('NLP keywords')
 
