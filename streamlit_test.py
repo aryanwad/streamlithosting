@@ -37,9 +37,9 @@ st.title("Stock Market Analysis")
 
 # Streamlit Sidebar
 
-stock_search = st.sidebar.text_input('Stock Search',placeholder = "input stock ticker here")
+stock_search = st.sidebar.text_input('Stock Search',placeholder = "Input stock ticker here")
 
-keywords_input = st.sidebar.text_input('NLP keywords')
+keywords_input = st.sidebar.text_input('NLP keywords',placeholder = "Keywords with space here")
 
 # Checkboxes
 
