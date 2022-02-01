@@ -12,3 +12,4 @@ emoji
 statistics
 bs4
 tensorflow
+sklearn
