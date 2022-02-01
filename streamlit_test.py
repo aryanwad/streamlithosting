@@ -490,7 +490,7 @@ def reddit_twitter_webscraping_sentiment(twitter_num_of_tweets = tweet_num,reddi
         final_list = stats.mean(final_list)
         # print("The mean is: " + str(final_list))
       find_mean_from_list()
-
+      global very_last_sentiment
       very_last_sentiment = (final_list + final_sentiment)/2
       st.write("The final sentiment is: " + str(very_last_sentiment))
 
@@ -514,6 +514,12 @@ def main2():
     if nlp_model_checkbox:
       if len(keywords_input) > 0:
         reddit_twitter_webscraping_sentiment()
+        if very_last_sentiment > 0.3:
+            st.write("Sentiment is high, you should buy short-term")
+        elif very_last_sentiment < -0.3:
+            st.write("Sentiment is very low, you should sell short-term")
+        else:
+            st.write("Sentiment is neutral, you should not do anything")
   elif nlp_model_checkbox:
     if len(keywords_input) > 0:
       reddit_twitter_webscraping_sentiment()
