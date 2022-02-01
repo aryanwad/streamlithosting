@@ -31,7 +31,7 @@ import statistics as stats
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 
-st.sidebar.image("AWlogo1.png")
+st.sidebar.image("AWlogo2.png")
 # Streamlit title
 st.title("Stock Market Analysis")
 
