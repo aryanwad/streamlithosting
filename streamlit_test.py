@@ -47,7 +47,7 @@ nlp_model_checkbox = st.sidebar.checkbox("Press this if you want to enable NLP m
 
 lstm_model_checkbox = st.sidebar.checkbox("Press this if you want to enable LSTM model")
 
-arima_model_checkbox = st.sidebar.checkbox("Press this if you want to enable ARIMA model")
+#arima_model_checkbox = st.sidebar.checkbox("Press this if you want to enable ARIMA model")
 
 ready_to_run_code = st.checkbox("Click this when you are ready to run the code")
 
@@ -270,7 +270,8 @@ def download_data(ticker = tickers):
 
       value_data=scaler.transform(value_data)
       pr = lstm_model.predict(value_data)
-      st.write("Predicted price: " + pr)
+      st.write("Predicted price: ")
+      st.write(pr)
 
     lstm_prediction()
   
