@@ -166,7 +166,7 @@ def download_data(ticker = tickers):
   plt.plot(dataframe["Date"],dataframe[display_cols])
   plt.ylabel("Dollars")
   plt.xlabel("Date")
-  plt.legend()
+  plt.legend(loc = "upper left")
   plt.draw()
 
   st.pyplot(plt)
