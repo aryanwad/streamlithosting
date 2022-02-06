@@ -151,7 +151,7 @@ if lstm_model_checkbox:
 
 # Download data from yahoo finance
 def download_data(ticker = tickers):
-  data = yf.download(ticker)
+  data = yf.download(ticker, start = "2000-01-01")
   # st.write(ticker)
   cf = data
 
