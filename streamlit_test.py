@@ -391,7 +391,10 @@ def reddit_twitter_webscraping_sentiment(twitter_num_of_tweets = tweet_num,reddi
             except:
               pass
         # print(len(lst))
-        st.write("Reddit sentiment: " + str(stats.mean(lst)))
+        try: 
+            st.write("Reddit sentiment: " + str(stats.mean(lst)))
+        except:
+            pass
       reddit_stream()
   # and len(lst) <= len(KEYWORDS)*40+200
       lst_twitter = []
