@@ -147,7 +147,7 @@ if nlp_model_checkbox:
   st.write("Extended sidebar, please scroll down")
 
 if lstm_model_checkbox:
-  display_cols = st.sidebar.multiselect('Display Data', ["Close","Low","Open","High",],default = "Close")
+  display_cols = st.sidebar.multiselect('Display Data', ["Close","Adj Close","Low","Open","High",],default = "Adj Close")
 
 # Download data from yahoo finance
 def download_data(ticker = tickers):
@@ -200,13 +200,13 @@ def download_data(ticker = tickers):
   df.loc[df['is_month_end']==False,'is_month_end']=0
   df.loc[df['is_month_end']==True,'is_month_end']=1
 
-  df = df.drop(['Date','Open','Low','High','Adj Close','Volume'], axis = 1) 
+  df = df.drop(['Date','Open','Low','High','Close','Volume'], axis = 1) 
 
 
   # *********************** splitting the dataset
 
-  X = df.drop('Close', axis=1)
-  y = df['Close']
+  X = df.drop('Adj Close', axis=1)
+  y = df['Adj Close']
 
   X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=42)
 
