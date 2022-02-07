@@ -416,6 +416,7 @@ def reddit_twitter_webscraping_sentiment(twitter_num_of_tweets = tweet_num,reddi
                   pass
               except:
                 pass
+        st.write("Twitter Sentiment: " + str(stats.mean(lst_twitter)))
       twitter_streams()
         
       def web_scraping_sentiment():
