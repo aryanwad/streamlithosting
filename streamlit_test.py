@@ -1,5 +1,5 @@
 #%%writefile app.py
-
+# i hope this works now
 # All imports
 import streamlit as st
 import yfinance as yf
