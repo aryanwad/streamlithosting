@@ -9,7 +9,7 @@ requests
 vaderSentiment
 langdetect
 emoji
-statistics
+statistics == 1.0.3.5
 bs4
 tensorflow
 sklearn
