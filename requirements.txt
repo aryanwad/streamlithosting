@@ -13,3 +13,4 @@ statistics == 1.0.3.5
 bs4
 tensorflow
 sklearn
+statsmodels == 0.13.2
