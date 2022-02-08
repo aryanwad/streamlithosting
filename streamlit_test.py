@@ -224,7 +224,7 @@ def download_data(ticker = tickers):
     lstm_model.add(Dense(1))
 
     lstm_model.compile(loss='mean_squared_error',optimizer='adam')
-    lstm_model.fit(X_train,y_train,epochs=200,batch_size=25,verbose=2)
+    lstm_model.fit(X_train,y_train,epochs=220,batch_size=25,verbose=2)
 
     # Testing
     predicted_closing_price=lstm_model.predict(X_test)
