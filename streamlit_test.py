@@ -442,16 +442,21 @@ def reddit_twitter_webscraping_sentiment(twitter_num_of_tweets = tweet_num,reddi
         soup = BeautifulSoup(apewisdom_response, features="lxml")
         html = BeautifulSoup(finviz_response, features="lxml")
 
+        try:
+            mentioning_users = soup.findAll("div",{"class":"details-small-tile"})[-2]
+            upvotes = soup.findAll("div",{"class":"details-small-tile"})[-3]
+            mentions = soup.findAll("div",{"class":"details-small-tile"})[-4]
+            news_table = html.find(id='news-table')
 
-        mentioning_users = soup.findAll("div",{"class":"details-small-tile"})[-2]
-        upvotes = soup.findAll("div",{"class":"details-small-tile"})[-3]
-        mentions = soup.findAll("div",{"class":"details-small-tile"})[-4]
-        news_table = html.find(id='news-table')
-
-        mentioning_users_percentage = mentioning_users.find("span").text
-        upvotes_percentage = upvotes.find("span").text
-        mentions_percentage = mentions.find("span").text
-        sentiment = soup.findAll("div",{"class":"tile-value"})[-1].text
+            mentioning_users_percentage = mentioning_users.find("span").text
+            upvotes_percentage = upvotes.find("span").text
+            mentions_percentage = mentions.find("span").text
+            sentiment = soup.findAll("div",{"class":"tile-value"})[-1].text
+        except:
+            pass
+        
+        if sentiment == 0:
+            sentiment = 50
 
 
         dataRows = news_table.findAll('tr')
