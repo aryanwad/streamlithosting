@@ -11,5 +11,5 @@ langdetect
 emoji
 statistics == 1.0.3.5
 bs4
-tensorflow
+tensorflow-cpu
 sklearn
