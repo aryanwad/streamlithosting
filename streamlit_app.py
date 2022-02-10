@@ -150,7 +150,7 @@ if lstm_model_checkbox:
   display_cols = st.sidebar.multiselect('Display Data', ["Close","Low","Open","High",],default = "High")
 
 # Download data from yahoo finance
-def download_data(ticker = tickers):
+def download_data(ticker = tickers, start = "2000-01-01"):
   data = yf.download(ticker)
   # st.write(ticker)
   cf = data
