@@ -1,5 +1,5 @@
 yfinance
-streamlit == 1.5.0
+streamlit==1.5.0
 matplotlib
 pandas-datareader
 plotly-express
@@ -11,6 +11,5 @@ langdetect
 emoji
 statistics == 1.0.3.5
 bs4
-tensorflow
+tensorflow-cpu
 sklearn
-statsmodels == 0.13.2
